@@ -9,9 +9,9 @@ A projekt egy webáruház alapvető üzleti logikáját kezeli és mutatja be eg
 
 ## Webáruház felépítésének szakaszai
 
-Az adatbázis teljes implementációja, minta adatokkal való feltöltése és tesztelése négy szakaszban valósult meg:
+Az adatbázis teljes implementációja, mintaadatokkal való feltöltése és tesztelése négy szakaszban valósult meg:
 
-### 1. Táblák létrehozása (schema.sql)
+### 1. Táblák létrehozása 
 
 - `Customers`: *(Vásárlói adatok megadása egyedi e-mail címekkel)*
 - `Product_Categories`: *(Tetszőleges termék kategóriák beállítása)*
@@ -20,19 +20,19 @@ Az adatbázis teljes implementációja, minta adatokkal való feltöltése és t
 - `Order_Items`: *(Kapcsolótábla a rendelések és a termékek kapcsolatával, megjelenítve a mennyiséget és az egységárat)*
 - `Payments`: *(A megkísérelt és végbement fizetési tranzakciókat tartalmazó tábla)*
 
-Link: [Schema.sql](https://learn.microsoft.com/hu-hu/rest/api/compute/virtual-machines?view=rest-compute-2025-04-01)
+Link: [Schema.sql](schema.sql)
 
-### 2. Minta adatok feltöltése
+### 2. Mintaadatok feltöltése
 
-A táblák minta adatokkal való feltöltése, hogy az adatbázis használatot előkészítsem és a későbbiekben tesztelhessem a megfelelő működését.
+A táblák mintaadatokkal való feltöltése, hogy az adatbázis használatot előkészítsem és a későbbiekben tesztelhessem a megfelelő működését.
 
-Link: [Insert_data.sql](https://learn.microsoft.com/hu-hu/rest/api/compute/virtual-machines?view=rest-compute-2025-04-01) 
+Link: [Insert_data.sql](insert_data.sql) 
 
 ### 3. Indexek beállítása
 
 A táblák bizonyos mezőihez indexek létrehozása a jobb teljesítmény és a lekérdezések felgyorsítása érdekében. 
 
-Link: [Indexes.sql](https://learn.microsoft.com/hu-hu/rest/api/compute/virtual-machines?view=rest-compute-2025-04-01) 
+Link: [Indexes.sql](indexes.sql) 
 
 ### 4. Lekérdezések az adatbázisból
 
@@ -69,7 +69,7 @@ Megmutatja azokat a vásárlókat, akik még nem adtak le rendelést.
 
 Megmutatja mely rendelésekhez tartozik sikeres fizetés, és melyekhez nem.
 
-Link: [Queries.sql](https://learn.microsoft.com/hu-hu/rest/api/compute/virtual-machines?view=rest-compute-2025-04-01)
+Link: [Queries.sql](queries.sql)
 
 
 
