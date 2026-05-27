@@ -11,7 +11,7 @@ A projekt egy webáruház alapvető üzleti logikáját kezeli és mutatja be eg
 
 Az adatbázis teljes implementációja, mintaadatokkal való feltöltése és tesztelése négy szakaszban valósult meg:
 
-### 1. Táblák létrehozása 
+### 1. Táblák létrehozása - [Schema.sql](schema.sql) 
 
 - `Customers`: *(Vásárlói adatok megadása egyedi e-mail címekkel)*
 - `Product_Categories`: *(Tetszőleges termék kategóriák beállítása)*
@@ -20,21 +20,15 @@ Az adatbázis teljes implementációja, mintaadatokkal való feltöltése és te
 - `Order_Items`: *(Kapcsolótábla a rendelések és a termékek kapcsolatával, megjelenítve a mennyiséget és az egységárat)*
 - `Payments`: *(A megkísérelt és végbement fizetési tranzakciókat tartalmazó tábla)*
 
-Link: [Schema.sql](schema.sql)
-
-### 2. Mintaadatok feltöltése
+### 2. Mintaadatok feltöltése - [Insert_data.sql](insert_data.sql) 
 
 A táblák mintaadatokkal való feltöltése, hogy az adatbázis használatot előkészítsem és a későbbiekben tesztelhessem a megfelelő működését.
 
-Link: [Insert_data.sql](insert_data.sql) 
-
-### 3. Indexek beállítása
+### 3. Indexek beállítása - [Indexes.sql](indexes.sql) 
 
 A táblák bizonyos mezőihez indexek létrehozása a jobb teljesítmény és a lekérdezések felgyorsítása érdekében. 
 
-Link: [Indexes.sql](indexes.sql) 
-
-### 4. Lekérdezések az adatbázisból
+### 4. Lekérdezések az adatbázisból - [Queries.sql](queries.sql)
 
 #### A, Rendelés részleteinek kilistázása az alábbi szempontok alapján:
 
@@ -47,29 +41,28 @@ Link: [Indexes.sql](indexes.sql)
 
 #### B, Rendelésenkénti összérték 
 
-Megmutatja az összes rendelés teljes értékét. 
+*Megmutatja az összes rendelés teljes értékét.* 
 
 #### C, Vásárlónkénti rendelésszám 
 
-Megmutatja, hogy egyes vásárlóknak hány rendelése volt.
+*Megmutatja, hogy egyes vásárlóknak hány rendelése volt.*
 
 #### D, Legtöbbet rendelt termékek 
 
-Megmutatja a termékeket a rendelt mennyiség alapján csökkenő sorrendben.
+*Megmutatja a termékeket a rendelt mennyiség alapján csökkenő sorrendben.*
 
 #### E, Kategóriánkénti termékek száma
 
-Megmutatja, hogy egyes kategóriákban hány termék található.
+*Megmutatja, hogy egyes kategóriákban hány termék található.*
 
 #### F, Még nem rendelő vásárlók 
 
-Megmutatja azokat a vásárlókat, akik még nem adtak le rendelést.
+*Megmutatja azokat a vásárlókat, akik még nem adtak le rendelést.*
 
 #### G, Fizetett és nem fizetett rendelések 
 
-Megmutatja mely rendelésekhez tartozik sikeres fizetés, és melyekhez nem.
+*Megmutatja mely rendelésekhez tartozik sikeres fizetés, és melyekhez nem.*
 
-Link: [Queries.sql](queries.sql)
 
 
 
