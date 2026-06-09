@@ -4,7 +4,8 @@ c.First_Name,
 c.Last_Name,
 p.Product_Name,
 oi.Quantity,
-oi.Unit_Price
+oi.Unit_Price,
+oi.Quantity * oi.Unit_Price AS Overall_Price
 FROM dbo.Order_Items oi
 INNER JOIN dbo.Orders o
 ON oi.Orders_Id=o.Id
@@ -24,7 +25,7 @@ FROM dbo.Orders
 GROUP BY Customer_Id;
 
 SELECT Product_Id,
-COUNT (Product_Id) AS Ordered_Products
+SUM (Quantity) AS Ordered_Products
 FROM dbo.Order_Items
 GROUP BY Product_Id
 ORDER BY Ordered_Products DESC;
@@ -40,7 +41,7 @@ c.Last_Name
 FROM dbo.Customers c
 LEFT JOIN dbo.Orders o
 ON c.Id=o.Customer_Id
-WHERE o.Id = NULL;
+WHERE o.Id IS NULL;
 
 SELECT 
 o.Id,
