@@ -12,3 +12,8 @@ ON dbo.Products (Product_Name);
 
 CREATE INDEX IND_Prod_Price
 ON dbo.Products (Price);
+
+DROP INDEX IND_Email ON dbo.Customers;
+
+CREATE INDEX IND_Orders_Id
+ON dbo.Order_Items (Orders_Id);
